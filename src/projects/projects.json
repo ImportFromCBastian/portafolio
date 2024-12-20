@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Project 1",
+      "description": "This is project 1",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "description": "This is project 2",
+      "status": "inactive"
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "description": "This is project 3",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Project 4",
+      "description": "This is project 4",
+      "status": "inactive"
+    },
+    {
+      "id": 5,
+      "name": "Project 5",
+      "description": "This is project 5",
+      "status": "active"
+    }
+  ]
+}
