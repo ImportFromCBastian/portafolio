@@ -1,4 +1,6 @@
 ---
+import Header from '@/layouts/main/Header.astro'
+import Footer from '@/layouts/main/Footer.astro'
 interface Props {
   pageTitle: String
 }
@@ -16,6 +18,38 @@ const { pageTitle } = Astro.props
     <title>Portafolio • {pageTitle}</title>
   </head>
   <body>
-    <slot />
+    <div id="container">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    align-items: stretch;
+    --tw-bg-opacity: 1;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+    height: 100dvh;
+  }
+</style>
+
+<style>
+  #container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    grid-template-rows:
+      max-content
+      1fr
+      max-content;
+    min-height: 100dvh;
+    grid-template-columns: 1fr;
+  }
+</style>
