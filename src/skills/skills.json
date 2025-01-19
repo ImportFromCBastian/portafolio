@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "name": "React",
+      "level": 80
+    },
+    {
+      "name": "Express.js",
+      "level": 80
+    },
+    {
+      "name": "Vue.js",
+      "level": 90
+    },
+    {
+      "name": "Python 3",
+      "level": 75
+    },
+    {
+      "name": "Flask",
+      "level": 75
+    },
+    {
+      "name": "PHP",
+      "level": 70
+    },
+    {
+      "name": "Symphony",
+      "level": 55
+    },
+    {
+      "name": "Astro",
+      "level": 78
+    },
+    {
+      "name": "Tailwindcss",
+      "level": 90
+    }
+  ]
+}

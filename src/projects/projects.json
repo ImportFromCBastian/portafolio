@@ -2,33 +2,24 @@
   "data": [
     {
       "id": 1,
-      "name": "Project 1",
-      "description": "This is project 1",
-      "status": "active"
+      "name": "Fedeteria 🛠️",
+      "description": "Proyecto de la materia de Ingeniería de Software, en el cual se desarrolla una aplicación web para el intercambio de articulos de ferreteria.",
+      "technologies": ["React", "Node.js", "Express.js"],
+      "link": "https://github.com/ImportFromCBastian/fedeteria-front"
     },
     {
       "id": 2,
-      "name": "Project 2",
-      "description": "This is project 2",
-      "status": "inactive"
+      "name": "Cedica 🏇",
+      "description": "Proyecto de la materia Proyecto de software, en la cual se desarrolla una aplicacion de gestion de una empresa de equinoterapia",
+      "technologies": ["Vue.js", "Python 3", "Flask"],
+      "link": "disabled"
     },
     {
       "id": 3,
-      "name": "Project 3",
-      "description": "This is project 3",
-      "status": "active"
-    },
-    {
-      "id": 4,
-      "name": "Project 4",
-      "description": "This is project 4",
-      "status": "inactive"
-    },
-    {
-      "id": 5,
-      "name": "Project 5",
-      "description": "This is project 5",
-      "status": "active"
+      "name": "Tenis app 🎾",
+      "description": "Proyecto de la materia optativa Métodos Ágiles para Aplicaciones Web, para la gestion de un club de tenis de sus gastos y ganancias.",
+      "technologies": ["React", "PHP", "Symphony"],
+      "link": "https://github.com/ImportFromCBastian/fedeteria-front"
     }
   ]
 }
