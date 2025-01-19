@@ -1,0 +1,60 @@
+---
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Image } from 'astro:assets'
+---
+
+<section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2
+      class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white"
+    >
+      About Me
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <Card>
+          <CardContent class="p-6">
+            <h3
+              class="text-2xl font-semibold mb-2 text-gray-800 dark:text-white p-2"
+            >
+              Sebastian Hernandez
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Soy un apasionado por el desarrollo web y la tecnología en
+              general, soy mas especializado en el area del front-end pero
+              tambien me veo capacitado de aportar cosas en el back-end, me
+              gusta aprender cosas nuevas y siempre estoy en constante
+              aprendizaje.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Me encanta el trabajo en equipo y soy destacado por siempre estar
+              pendiente de que los demas esten comodos trabajando conmigo y
+              todos podamos ayudarnos entre sí.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <Badge>JavaScript</Badge>
+              <Badge>React</Badge>
+              <Badge>Node.js</Badge>
+              <Badge>TypeScript</Badge>
+              <Badge>HTML</Badge>
+              <Badge>CSS</Badge>
+            </div>
+            <Button>Download CV</Button>
+          </CardContent>
+        </Card>
+      </div>
+      <div class="flex justify-center">
+        <Image
+          class="rounded-full"
+          src="https://avatars.githubusercontent.com/u/107598174?s=400&u=61c567ac830c156b1247806e0fa1c7e0b09b31c1&v=4"
+          alt="Sebastian Hernandez"
+          loading={'eager'}
+          width="300"
+          height="300"
+        />
+      </div>
+    </div>
+  </div>
+</section>
