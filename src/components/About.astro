@@ -1,8 +1,9 @@
 ---
-import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Image } from 'astro:assets'
+const filePath = '/my-cv.pdf'
+const fileName = 'sebastian_hernandez-cv.pdf'
 ---
 
 <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
@@ -15,25 +16,26 @@ import { Image } from 'astro:assets'
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div class="space-y-4">
         <Card>
-          <CardContent class="p-6">
+          <CardContent className="p-6">
             <h3
               class="text-2xl font-semibold mb-2 text-gray-800 dark:text-white p-2"
             >
               Sebastian Hernandez
             </h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Soy un apasionado por el desarrollo web y la tecnología en
-              general, soy mas especializado en el area del front-end pero
-              tambien me veo capacitado de aportar cosas en el back-end, me
-              gusta aprender cosas nuevas y siempre estoy en constante
-              aprendizaje.
+              My passion is to build web applications and learn new things every
+              day. I'm a frontend developer with some experience in backend
+              development. I love working in teams and helping others to grow. I
+              have experience working with Scrum methodologies, which has
+              enhanced my ability to deliver high-quality software in an agile
+              environment.
             </p>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Me encanta el trabajo en equipo y soy destacado por siempre estar
-              pendiente de que los demas esten comodos trabajando conmigo y
-              todos podamos ayudarnos entre sí.
+              I love teamwork and I am outstanding for always being aware that
+              others are comfortable working with me and we can all help each
+              other.
             </p>
-            <div class="flex flex-wrap gap-2 mb-4">
+            <div class="flex flex-wrap gap-2 mb-5">
               <Badge>JavaScript</Badge>
               <Badge>React</Badge>
               <Badge>Node.js</Badge>
@@ -41,7 +43,11 @@ import { Image } from 'astro:assets'
               <Badge>HTML</Badge>
               <Badge>CSS</Badge>
             </div>
-            <Button>Download CV</Button>
+            <a
+              class="text-white rounded-md p-2.5 bg-black hover:bg-zinc-900 font-semibold shadow-md transition-colors ease-in-out duration-300"
+              href={filePath}
+              download={fileName}>Download CV</a
+            >
           </CardContent>
         </Card>
       </div>
