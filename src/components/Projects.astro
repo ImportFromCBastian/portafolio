@@ -21,8 +21,8 @@ const projects = await fetchProjects()
       My Projects
     </h2>
     <p class="text-center text-zinc-500 dark:text-zinc-300 mb-6">
-      Estos son mis proyectos principales que he desarrollado en mi carrera como
-      informatico.
+      These are my projects that i worked on throughout my journey as web
+      developer.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
@@ -43,11 +43,7 @@ const projects = await fetchProjects()
               {project.link.includes('disable') ? (
                 <p class="text-zinc-500 text-sm">No disponible</p>
               ) : (
-                <a
-                  href={project.link}
-                  class="text-blue-500 hover:pointer-events-none"
-                  target="_blank"
-                >
+                <a href={project.link} class="text-blue-500" target="_blank">
                   View project
                 </a>
               )}
