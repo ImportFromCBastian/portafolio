@@ -14,7 +14,7 @@ const skills = await fetchSkills()
     </h2>
     <div class="max-w-2xl mx-auto">
       {
-        skills.map((skill, index) => (
+        skills.map((skill) => (
           <div class="mb-4">
             <div class="flex justify-between mb-1">
               <span class="text-base font-medium text-gray-700 dark:text-gray-300">
@@ -24,7 +24,7 @@ const skills = await fetchSkills()
                 {skill.level}%
               </span>
             </div>
-            <Progress value={skill.level} class="w-full" />
+            <Progress value={skill.level} className="w-full" />
           </div>
         ))
       }
