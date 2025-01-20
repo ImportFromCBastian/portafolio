@@ -43,11 +43,7 @@ const projects = await fetchProjects()
               {project.link.includes('disable') ? (
                 <p class="text-zinc-500 text-sm">No disponible</p>
               ) : (
-                <a
-                  href={project.link}
-                  class="text-blue-500 hover:pointer-events-none"
-                  target="_blank"
-                >
+                <a href={project.link} class="text-blue-500" target="_blank">
                   View project
                 </a>
               )}
