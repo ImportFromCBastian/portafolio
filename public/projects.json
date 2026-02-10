@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Fedeteria 🛠️",
+      "description": "Project for the Software Engineering course. Developed a web application for trading hardware products, integrating Mercado Pago API for in-app purchases.",
+      "technologies": ["React", "Node.js", "Express.js", "Mercado Pago API"],
+      "link": "https://github.com/ImportFromCBastian/fedeteria-front"
+    },
+    {
+      "id": 2,
+      "name": "Cedica 🏇",
+      "description": "Developed for the Software Project course to manage an equine therapy organization. Features include object storage, Google OAuth, CAPTCHA security, and a full CI/CD pipeline for deployment.",
+      "technologies": ["Vue.js", "Python 3", "Flask", "PostgreSQL", "CI/CD"],
+      "link": "https://github.com/ImportFromCBastian/pds"
+    },
+    {
+      "id": 3,
+      "name": "Tenis app 🎾",
+      "description": "Project for the Agile Methodologies for Web Development course. A management system for a tennis club handling court reservations and financial transactions.",
+      "technologies": ["React", "PHP", "Symfony"],
+      "link": "https://github.com/MAPAW-UNLP/tenis-2024-frontend"
+    },
+    {
+      "id": 4,
+      "name": "Job Application Tracker 🚀",
+      "description": "Full-stack application to centralize job search management. Features a Kanban board for application tracking, secure authentication via Next-Auth, and data persistence with Prisma.",
+      "technologies": ["Next.js", "TypeScript", "Prisma", "PrismaPostgres", "Tailwind CSS"],
+      "link": "https://github.com/ImportFromCBastian/jd-tracker-app"
+    }
+  ]
+}

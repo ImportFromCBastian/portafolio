@@ -1,0 +1,22 @@
+const Hero = () => {
+  return (
+    <section className="py-20 text-center">
+      <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
+        Welcome to my portafolio
+      </h1>
+      <p className="text-xl mb-8 text-gray-600 dark:text-gray-300">
+        I'm a passionate software developer who loves to build web applications.
+      </p>
+      <a
+        className="text-white rounded-md p-2.5 bg-black hover:bg-zinc-900 font-semibold shadow-md transition-colors ease-in-out duration-300"
+        href="https://github.com/ImportFromCBastian"
+        target="_blank"
+        rel="noopener"
+      >
+        View my work
+      </a>
+    </section>
+  )
+}
+
+export default Hero

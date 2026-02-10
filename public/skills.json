@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "name": "ReactJs",
+      "level": 90,
+      "icon": "https://img.shields.io/badge/-%2320232a.svg?logo=react&logoColor=%2361DAFB"
+    },
+    {
+      "name": "NextJs",
+      "level": 90,
+      "icon": "https://img.shields.io/badge/-white.svg?logo=nextdotjs&logoColor=black"
+    },
+    {
+      "name": "Express.js",
+      "level": 80,
+      "icon": "https://img.shields.io/badge/-6DA55F.svg?logo=express&logoColor=white"
+    },
+    {
+      "name": "NestJs",
+      "level": 0,
+      "icon": "https://img.shields.io/badge/-black.svg?logo=nestjs&logoColor=orange"
+    },
+    {
+      "name": "Tailwindcss",
+      "level": 90,
+      "icon": "https://img.shields.io/badge/-%2338B2AC.svg?logo=tailwind-css&logoColor=white"
+    },
+    {
+      "name": "Vue.js",
+      "level": 80,
+      "icon": "https://img.shields.io/badge/-%2335495e.svg?logo=vuedotjs&logoColor=%234FC08D"
+    },
+    {
+      "name": "Python 3",
+      "level": 75,
+      "icon": "https://img.shields.io/badge/-blue.svg?logo=python&logoColor=white"
+    },
+    {
+      "name": "Flask",
+      "level": 75,
+      "icon": "https://img.shields.io/badge/-%23000.svg?style=flat&logo=flask&logoColor=white"
+    },
+    {
+      "name": "PHP",
+      "level": 70,
+      "icon": "https://img.shields.io/badge/-%23777BB4.svg?logo=php&logoColor=white"
+    }
+
+  ]
+}
