@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import type { Skill } from '@/app/schema/skill'
 import { Progress } from '@/components/ui/progress'
+import type { Skill } from '@/schema/skill'
 
 const SkillRow = ({ name, level, icon }: Skill) => {
   return (

@@ -1,4 +1,3 @@
-import type { Project } from '@/app/schema/project'
 import { Badge } from '@/components/ui/badge'
 import {
   Card,
@@ -8,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import type { Project } from '@/schema/project'
 
 const ProjectCard = ({
   name,
