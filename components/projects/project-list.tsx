@@ -1,5 +1,5 @@
-import { getProjects } from '@/app/lib/actions/get-projects'
-import ProjectCarousel from './ProjectCarousel' // El componente nuevo
+import { getProjects } from '@/lib/actions/get-projects'
+import ProjectCarousel from './project-carousel' // El componente nuevo
 
 const ProjectList = async () => {
   const { data } = await getProjects()

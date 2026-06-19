@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import ProjectCard from './ProjectCard'
+import ProjectCard from './project-card'
 
 export default function ProjectCarousel({ projects }: { projects: Project[] }) {
   return (

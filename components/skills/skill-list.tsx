@@ -1,5 +1,5 @@
-import { getSkills } from '@/app/lib/actions/get-skills'
-import SkillRow from './SkillRow'
+import { getSkills } from '@/lib/actions/get-skills'
+import SkillRow from './skill-row'
 
 const SkillsList = async () => {
   const { data } = await getSkills()
