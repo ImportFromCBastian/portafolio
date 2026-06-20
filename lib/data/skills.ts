@@ -1,7 +1,9 @@
+import type { LocalizedString } from '@/lib/utils'
+
 export interface SkillCategory {
-  name: string
+  name: LocalizedString | string
   icon: string
-  description: string
+  description: LocalizedString
   skills: Skill[]
 }
 
@@ -15,7 +17,10 @@ export const skillCategories: SkillCategory[] = [
   {
     name: 'Frontend',
     icon: '🎨',
-    description: 'Desarrollo de interfaces modernas y responsivas',
+    description: {
+      es: 'Desarrollo de interfaces modernas y responsivas',
+      en: 'Development of modern and responsive interfaces',
+    },
     skills: [
       { name: 'React', proficiency: 90 },
       { name: 'Next.js', proficiency: 90 },
@@ -29,7 +34,10 @@ export const skillCategories: SkillCategory[] = [
   {
     name: 'Backend',
     icon: '⚙️',
-    description: 'Desarrollo de APIs y servicios escalables',
+    description: {
+      es: 'Desarrollo de APIs y servicios escalables',
+      en: 'Development of scalable APIs and services',
+    },
     skills: [
       { name: 'Node.js', proficiency: 85 },
       { name: 'Express.js', proficiency: 80 },
@@ -41,9 +49,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: 'Móvil',
+    name: {
+      es: 'Móvil',
+      en: 'Mobile',
+    },
     icon: '📱',
-    description: 'Desarrollo de aplicaciones Android nativas',
+    description: {
+      es: 'Desarrollo de aplicaciones Android nativas',
+      en: 'Development of native Android applications',
+    },
     skills: [
       { name: 'Android (Kotlin)', proficiency: 75 },
       { name: 'MVVM Architecture', proficiency: 85 },
@@ -52,9 +66,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: 'Bases de Datos',
+    name: {
+      es: 'Bases de Datos',
+      en: 'Databases',
+    },
     icon: '🗄️',
-    description: 'Diseño y optimización de bases de datos',
+    description: {
+      es: 'Diseño y optimización de bases de datos',
+      en: 'Design and optimization of databases',
+    },
     skills: [
       { name: 'PostgreSQL', proficiency: 90 },
       { name: 'MySQL', proficiency: 90 },
@@ -64,9 +84,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: 'DevOps & Herramientas',
+    name: {
+      es: 'DevOps & Herramientas',
+      en: 'DevOps & Tools',
+    },
     icon: '🔧',
-    description: 'Despliegue, automatización y herramientas de desarrollo',
+    description: {
+      es: 'Despliegue, automatización y herramientas de desarrollo',
+      en: 'Deployment, automation and development tools',
+    },
     skills: [
       { name: 'Git', proficiency: 90 },
       { name: 'Docker', proficiency: 80 },
@@ -77,9 +103,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: 'Arquitectura & Principios',
+    name: {
+      es: 'Arquitectura & Principios',
+      en: 'Architecture & Principles',
+    },
     icon: '🏗️',
-    description: 'Patrones de diseño y buenas prácticas',
+    description: {
+      es: 'Patrones de diseño y buenas prácticas',
+      en: 'Design patterns and best practices',
+    },
     skills: [
       { name: 'Clean Architecture', proficiency: 85 },
       { name: 'SOLID Principles', proficiency: 80 },

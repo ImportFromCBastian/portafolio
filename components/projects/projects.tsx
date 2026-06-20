@@ -2,17 +2,19 @@
 
 import { AnimatedText } from '@/components/animated-text'
 import { Badge } from '@/components/ui/badge'
-
 import { Card } from '@/components/ui/card'
 import { projects } from '@/lib/data/projects'
 import { useTranslation } from '@/lib/useTranslation'
 import { en } from '@/locales/en'
 import { es } from '@/locales/es'
+import { useLanguageStore } from '@/store/useLanguageStore'
 import ProjectActions from './project-actions'
 import ProjectsHeader from './project-header'
 
 export function Projects() {
   const { locale } = useTranslation({ es, en })
+
+  const { language } = useLanguageStore()
 
   return (
     <section id="projects" className="py-20 sm:py-32">
@@ -46,12 +48,12 @@ export function Projects() {
                   emoji={project.emoji}
                   star={project.star}
                   title={project.title}
-                  description={project.description}
+                  description={project.description[language]}
                 />
                 {/* Technical Description */}
                 <div className="bg-neutral-800/30 rounded-lg p-4">
                   <p className="text-sm text-neutral-300 leading-relaxed">
-                    {project.technicalDescription}
+                    {project.technicalDescription[language]}
                   </p>
                 </div>
 
@@ -62,7 +64,7 @@ export function Projects() {
                   </p>
                   <ul className="text-sm text-neutral-400 space-y-1 list-disc list-inside">
                     {project.challenges.slice(0, 2).map((challenge, idx) => (
-                      <li key={`${idx}-${challenge}`}>{challenge}</li>
+                      <li key={`${idx}-${challenge}`}>{challenge[language]}</li>
                     ))}
                   </ul>
                 </div>
@@ -71,7 +73,7 @@ export function Projects() {
                 <div className="bg-blue-950/20 border border-blue-900/30 rounded-lg p-3">
                   <p className="text-sm text-blue-300">
                     <span className="font-semibold">Impacto:</span>{' '}
-                    {project.impact}
+                    {project.impact[language]}
                   </p>
                 </div>
 

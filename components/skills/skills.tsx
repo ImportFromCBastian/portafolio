@@ -8,6 +8,7 @@ import { useTranslation } from '@/lib/useTranslation'
 import { getProficiencyColor } from '@/lib/utils'
 import { en } from '@/locales/en'
 import { es } from '@/locales/es'
+import { useLanguageStore } from '@/store/useLanguageStore'
 import SkillCategories from './skill-categories'
 import SkillsGridContent from './skill-grid-content'
 import SkillCardInfo from './skill-info'
@@ -16,6 +17,8 @@ import SkillFooterResume from './skill-resume'
 export function Skills() {
   const [selectedCategory, setSelectedCategory] = useState(0)
   const { locale } = useTranslation({ es, en })
+
+  const { language } = useLanguageStore()
 
   const getProficiencyLabels = (proficiency: number) => {
     if (proficiency >= 85) return locale.proeficiencyLabels.expert
@@ -52,43 +55,49 @@ export function Skills() {
           <SkillCategories skillCategories={skillCategories} />
 
           {/* Tab Content */}
-          {skillCategories.map((category, categoryIdx) => (
-            <TabsContent
-              key={`${category.name}-${categoryIdx}`}
-              value={categoryIdx.toString()}
-              className="space-y-6"
-            >
-              {/* Category Info Card */}
-              <SkillCardInfo
-                icon={category.icon}
-                name={category.name}
-                description={category.description}
-              />
+          {skillCategories.map((category, categoryIdx) => {
+            const name =
+              typeof category.name === 'string'
+                ? category.name
+                : category.name[language]
+            return (
+              <TabsContent
+                key={`${category.name}-${categoryIdx}`}
+                value={categoryIdx.toString()}
+                className="space-y-6"
+              >
+                {/* Category Info Card */}
+                <SkillCardInfo
+                  icon={category.icon}
+                  name={name}
+                  description={category.description[language]}
+                />
 
-              {/* Skills Grid */}
-              <div className="grid gap-4 md:grid-cols-2">
-                {category.skills.map((skill) => {
-                  const colorClass = getProficiencyColor(skill.proficiency)
-                  return (
-                    <SkillsGridContent
-                      key={skill.icon}
-                      colorClass={colorClass}
-                      skillName={skill.name}
-                      skillProficiency={skill.proficiency}
-                      skillProficiencyLabel={getProficiencyLabels(
-                        skill.proficiency
-                      )}
-                    />
-                  )
-                })}
-              </div>
-              <SkillFooterResume
-                summary={locale.sections.skills.summary}
-                skills={category.skills}
-                category={category.name}
-              />
-            </TabsContent>
-          ))}
+                {/* Skills Grid */}
+                <div className="grid gap-4 md:grid-cols-2">
+                  {category.skills.map((skill) => {
+                    const colorClass = getProficiencyColor(skill.proficiency)
+                    return (
+                      <SkillsGridContent
+                        key={skill.icon}
+                        colorClass={colorClass}
+                        skillName={skill.name}
+                        skillProficiency={skill.proficiency}
+                        skillProficiencyLabel={getProficiencyLabels(
+                          skill.proficiency
+                        )}
+                      />
+                    )
+                  })}
+                </div>
+                <SkillFooterResume
+                  summary={locale.sections.skills.summary}
+                  skills={category.skills}
+                  category={name}
+                />
+              </TabsContent>
+            )
+          })}
         </Tabs>
       </div>
     </section>
