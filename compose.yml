@@ -1,0 +1,33 @@
+services:
+  portfolio:
+    build:
+      context: .
+      target: runner
+    image: portfolio:latest
+    container_name: portfolio
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: 3000
+    restart: unless-stopped
+
+  portfolio-build:
+    build:
+      context: .
+      target: builder
+    working_dir: /app
+    command: sh -lc "bun install --frozen-lockfile && npm run build"
+    volumes:
+      - .:/app
+      - portfolio-node-modules:/app/node_modules
+      - portfolio-next-cache:/app/.next/cache
+      - bun-cache:/root/.bun
+    profiles:
+      - build
+
+volumes:
+  portfolio-node-modules:
+  portfolio-next-cache:
+  bun-cache:
