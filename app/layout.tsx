@@ -1,19 +1,55 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Footer from '@/components/layout/footer'
-import Header from '@/components/layout/header'
-
+import { Geist, Geist_Mono } from 'next/font/google'
+import { Footer } from '@/components/ui/layout/footer'
+import { Navbar } from '@/components/ui/layout/navbar'
+import { siteConfig } from '@/lib/constants'
 import './globals.css'
 
-const inter = Inter({
-  variable: '--font-inter',
+const geist = Geist({
   subsets: ['latin'],
+  variable: '--font-geist-sans',
+})
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
 })
 
 export const metadata: Metadata = {
-  title: 'Portafolio',
-  description:
-    'Portafolio de proyectos personales y profesionales de desarrollo web, diseño gráfico y otras habilidades creativas. Aquí encontrarás una selección de mis trabajos más destacados, incluyendo aplicaciones web, sitios web, diseños gráficos y más. Cada proyecto incluye detalles sobre las tecnologías utilizadas, el proceso de desarrollo y los resultados obtenidos. ¡Explora mi portafolio para conocer más sobre mis habilidades y experiencia en el mundo del desarrollo y diseño!',
+  title: siteConfig.title,
+  description: siteConfig.description,
+  authors: [{ name: siteConfig.name }],
+  metadataBase: new URL(siteConfig.url),
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  keywords: [
+    'Full Stack Developer',
+    'Software Developer',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Clean Architecture',
+    'Portfolio',
+    'UNLP',
+  ],
 }
 
 export default function RootLayout({
@@ -22,12 +58,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="dark" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased grid min-h-dvh grid-cols-[1fr] grid-rows-[max-content_1fr_max-content] bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100`}
+        className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        <Header />
-        {children}
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

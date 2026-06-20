@@ -1,6 +1,10 @@
-# 🚀 Portafolio Personal
+# 🚀 Portafolio de Sebastian Hernández
 
-Portafolio web moderno y responsivo construido con Next.js 16, que muestra mis proyectos, habilidades técnicas y experiencia como desarrollador full-stack.
+Portafolio personal profesional de Sebastian Hernández, Full Stack & Android Developer. Construido con **Next.js 16**, **TypeScript**, **Tailwind CSS** y **shadcn/ui**.
+
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=flat-square)
+![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black?style=flat-square&logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
 
 ## 📋 Descripción
 
@@ -110,16 +114,12 @@ cd portafolio
 
 ```bash
 bun install
-# o con npm/yarn/pnpm
-npm install
 ```
 
 1. **Ejecutar en modo desarrollo**
 
 ```bash
 bun dev
-# o
-npm run dev
 ```
 
 1. **Abrir en el navegador**
