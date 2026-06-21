@@ -52,7 +52,10 @@ export function Skills() {
           onValueChange={(val) => setSelectedCategory(parseInt(val, 10))}
           className="w-full"
         >
-          <SkillCategories skillCategories={skillCategories} />
+          <SkillCategories
+            skillCategories={skillCategories}
+            language={language}
+          />
 
           {/* Tab Content */}
           {skillCategories.map((category, categoryIdx) => {
