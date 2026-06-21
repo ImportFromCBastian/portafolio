@@ -140,14 +140,22 @@ export function About() {
               <div className="flex items-start gap-3">
                 <FileText className="h-5 w-5 text-blue-400 mt-1 shrink-0" />
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-neutral-50">
-                    {locale.sections.about.education}
-                  </h4>
+                  <span className="flex flex-col">
+                    <h4 className="font-semibold text-neutral-50">
+                      {locale.sections.about.education.title}
+                    </h4>
+                    <p className="text-xs text-neutral-500">
+                      {locale.sections.about.education.period.start} -{' '}
+                      {locale.sections.about.education.period.end === 'present'
+                        ? 'Present'
+                        : locale.sections.about.education.period.end}
+                    </p>
+                  </span>
                   <p className="text-sm text-neutral-400">
-                    Licenciatura en Informática
+                    {locale.sections.about.education.degree}
                   </p>
                   <p className="text-xs text-neutral-500">
-                    Universidad Nacional de La Plata (UNLP)
+                    {locale.sections.about.education.institution}
                   </p>
                 </div>
               </div>

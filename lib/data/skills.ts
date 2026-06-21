@@ -1,6 +1,7 @@
 import type { LocalizedString } from '@/lib/utils'
 
 export interface SkillCategory {
+  id: number
   name: LocalizedString | string
   icon: string
   description: LocalizedString
@@ -15,6 +16,7 @@ export interface Skill {
 
 export const skillCategories: SkillCategory[] = [
   {
+    id: 1,
     name: 'Frontend',
     icon: '🎨',
     description: {
@@ -32,6 +34,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    id: 2,
     name: 'Backend',
     icon: '⚙️',
     description: {
@@ -49,6 +52,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    id: 3,
     name: {
       es: 'Móvil',
       en: 'Mobile',
@@ -66,6 +70,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    id: 4,
     name: {
       es: 'Bases de Datos',
       en: 'Databases',
@@ -84,6 +89,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    id: 5,
     name: {
       es: 'DevOps & Herramientas',
       en: 'DevOps & Tools',
@@ -103,6 +109,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    id: 6,
     name: {
       es: 'Arquitectura & Principios',
       en: 'Architecture & Principles',

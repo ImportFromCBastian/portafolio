@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { AnimatedText } from '@/components/animated-text'
-import { Tabs, TabsContent } from '@/components/ui/tabs'
+import { Tabs, TabsContent, TabsList } from '@/components/ui/tabs'
 import { skillCategories } from '@/lib/data/skills'
 import { useTranslation } from '@/lib/useTranslation'
 import { getProficiencyColor } from '@/lib/utils'
@@ -15,7 +15,9 @@ import SkillCardInfo from './skill-info'
 import SkillFooterResume from './skill-resume'
 
 export function Skills() {
-  const [selectedCategory, setSelectedCategory] = useState(0)
+  const [selectedCategory, setSelectedCategory] = useState(
+    skillCategories[0].id
+  )
   const { locale } = useTranslation({ es, en })
 
   const { language } = useLanguageStore()
@@ -52,27 +54,40 @@ export function Skills() {
           onValueChange={(val) => setSelectedCategory(parseInt(val, 10))}
           className="w-full"
         >
-          <SkillCategories
-            skillCategories={skillCategories}
-            language={language}
-          />
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 h-auto bg-neutral-800/50 p-2 mb-8">
+            {skillCategories.map((category) => {
+              const localeName =
+                typeof category.name !== 'string'
+                  ? category.name[language]
+                  : category.name
+              return (
+                <SkillCategories
+                  key={category.id}
+                  value={category.id}
+                  animatedTextLabel={localeName}
+                  icon={category.icon}
+                  language={language}
+                />
+              )
+            })}
+          </TabsList>
 
           {/* Tab Content */}
-          {skillCategories.map((category, categoryIdx) => {
-            const name =
+          {skillCategories.map((category) => {
+            const localeName =
               typeof category.name === 'string'
                 ? category.name
                 : category.name[language]
             return (
               <TabsContent
-                key={`${category.name}-${categoryIdx}`}
-                value={categoryIdx.toString()}
+                key={category.id.toString()}
+                value={category.id.toString()}
                 className="space-y-6"
               >
                 {/* Category Info Card */}
                 <SkillCardInfo
                   icon={category.icon}
-                  name={name}
+                  name={localeName}
                   description={category.description[language]}
                 />
 
@@ -82,7 +97,7 @@ export function Skills() {
                     const colorClass = getProficiencyColor(skill.proficiency)
                     return (
                       <SkillsGridContent
-                        key={skill.icon}
+                        key={skill.name}
                         colorClass={colorClass}
                         skillName={skill.name}
                         skillProficiency={skill.proficiency}
@@ -94,9 +109,12 @@ export function Skills() {
                   })}
                 </div>
                 <SkillFooterResume
-                  summary={locale.sections.skills.summary}
+                  label={locale.sections.skills.summary.label}
                   skills={category.skills}
-                  category={name}
+                  category={localeName}
+                  firstText={locale.sections.skills.summary.firstPart}
+                  secondText={locale.sections.skills.summary.secondPart}
+                  lastText={locale.sections.skills.summary.lastPart}
                 />
               </TabsContent>
             )

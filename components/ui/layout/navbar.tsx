@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { siteConfig } from '@/lib/constants'
+import useLocaleLinks from '@/lib/hooks/useLocaleLinks'
 import { useTranslation } from '@/lib/useTranslation'
 import { en } from '@/locales/en'
 import { es } from '@/locales/es'
@@ -18,12 +19,7 @@ import { es } from '@/locales/es'
 export function Navbar() {
   const { locale } = useTranslation({ es, en })
 
-  const navigationLinks = [
-    { href: '#about', label: locale.navigation.about },
-    { href: '#projects', label: locale.navigation.projects },
-    { href: '#skills', label: locale.navigation.skills },
-    { href: '#contact', label: locale.navigation.contact },
-  ]
+  const navigationLinks = useLocaleLinks(locale)
 
   return (
     <nav className="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/95 backdrop-blur supports-backdrop-filter:bg-neutral-950/60">

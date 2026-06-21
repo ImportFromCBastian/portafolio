@@ -13,10 +13,3 @@ export const siteConfig = {
     phone: '+54 221 683-4808',
   },
 }
-
-export const navigationLinks = [
-  { href: '#about', label: 'Sobre mí' },
-  { href: '#projects', label: 'Proyectos' },
-  { href: '#skills', label: 'Habilidades' },
-  { href: '#contact', label: 'Contacto' },
-]

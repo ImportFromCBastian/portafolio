@@ -1,3 +1,8 @@
+type Period = {
+  start: number
+  end: number | 'present'
+}
+
 export type LocaleDictionary = {
   navigation: {
     about: string
@@ -33,7 +38,12 @@ export type LocaleDictionary = {
     skills: {
       title: string
       description: string
-      summary: string
+      summary: {
+        label: string
+        firstPart: string
+        secondPart: string
+        lastPart: string
+      }
       tabTitles: Array<string>
     }
     about: {
@@ -44,7 +54,12 @@ export type LocaleDictionary = {
       disciplines: string
       contact: string
       downloadCv: string
-      education: string
+      education: {
+        title: string
+        institution: string
+        degree: string
+        period: Period
+      }
       stats: {
         projects: string
         years: string
@@ -69,6 +84,11 @@ export type LocaleDictionary = {
         phone: string
       }
     }
+  }
+  footer: {
+    resume: string
+    followMeLabel: string
+    copyright: string
   }
   proeficiencyLabels: {
     expert: string

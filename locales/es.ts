@@ -38,7 +38,12 @@ export const es: LocaleDictionary = {
       title: 'Habilidades & Experiencia',
       description:
         'Organizado por área técnica, mostrando profundidad y experiencia en cada disciplina.',
-      summary: 'Resumen:',
+      summary: {
+        label: 'Resumen:',
+        firstPart: 'habilidades en',
+        secondPart: 'con un promedio de',
+        lastPart: 'de profundidad',
+      },
       tabTitles: [
         'Frontend',
         'Backend',
@@ -64,7 +69,15 @@ export const es: LocaleDictionary = {
       disciplines: 'Disciplinas',
       contact: 'Contactar',
       downloadCv: 'Descargar CV',
-      education: 'Educación',
+      education: {
+        title: 'Educación',
+        institution: 'Universidad Nacional de La Plata (UNLP)',
+        degree: 'Licenciatura en Informática',
+        period: {
+          start: 2022,
+          end: 'present',
+        },
+      },
       stats: {
         projects: 'Proyectos',
         years: 'Años XP',
@@ -91,6 +104,12 @@ export const es: LocaleDictionary = {
         phone: 'Para conversaciones urgentes',
       },
     },
+  },
+  footer: {
+    resume:
+      ' Full Stack & Android Developer especializado en construir soluciones técnicas de calidad.',
+    followMeLabel: 'Sígueme',
+    copyright: 'Todos los derechos reservados.',
   },
   proeficiencyLabels: {
     expert: 'Experto',

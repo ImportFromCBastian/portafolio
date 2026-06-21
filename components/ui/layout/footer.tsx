@@ -2,11 +2,17 @@
 
 import { Github, Heart, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
-import { navigationLinks, siteConfig } from '@/lib/constants'
+import { siteConfig } from '@/lib/constants'
+import useLocaleLinks from '@/lib/hooks/useLocaleLinks'
+import { useTranslation } from '@/lib/useTranslation'
+import { en } from '@/locales/en'
+import { es } from '@/locales/es'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const { locale } = useTranslation({ es, en })
+  const navigationLinks = useLocaleLinks(locale)
   return (
     <footer className="border-t border-neutral-800 bg-neutral-950 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -19,10 +25,7 @@ export function Footer() {
                 {siteConfig.name.split(' ')[0]}
               </span>
             </div>
-            <p className="text-sm text-neutral-500">
-              Full Stack & Android Developer especializado en construir
-              soluciones técnicas de calidad.
-            </p>
+            <p className="text-sm text-neutral-500">{locale.footer.resume}</p>
           </div>
 
           {/* Navigation */}
@@ -72,7 +75,9 @@ export function Footer() {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-neutral-50">Sígueme</h3>
+            <h3 className="font-semibold text-neutral-50">
+              {locale.footer.followMeLabel}
+            </h3>
             <div className="flex gap-2">
               <Link
                 href={siteConfig.links.github}
@@ -106,12 +111,13 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
           <p>
-            © {currentYear} {siteConfig.name}. Todos los derechos reservados.
+            &copy;
+            {` ${currentYear} ${siteConfig.name}. ${locale.footer.copyright}`}
           </p>
           <p className="flex items-center gap-1">
-            Construido con
+            Built with
             <Heart className="h-3 w-3 text-red-500" />
-            usando Next.js & Tailwind CSS
+            using Next.js & Tailwind CSS
           </p>
         </div>
       </div>

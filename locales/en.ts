@@ -38,7 +38,12 @@ export const en: LocaleDictionary = {
       title: 'Skills & Experience',
       description:
         'Organized by technical area, showing depth and experience in each discipline.',
-      summary: 'Summary:',
+      summary: {
+        label: 'Summary:',
+        firstPart: 'abilities in',
+        secondPart: 'with a average of',
+        lastPart: 'knowledge.',
+      },
       tabTitles: ['Frontend', 'Backend', 'Mobile', 'DevOps', 'Other'],
     },
     about: {
@@ -58,7 +63,15 @@ export const en: LocaleDictionary = {
       disciplines: 'Disciplines',
       contact: 'Contact',
       downloadCv: 'Download CV',
-      education: 'Education',
+      education: {
+        title: 'Education',
+        institution: 'Universidad Nacional de La Plata (UNLP)',
+        degree: 'Computer Science Degree',
+        period: {
+          start: 2022,
+          end: 'present',
+        },
+      },
       stats: {
         projects: 'Projects',
         years: 'Years XP',
@@ -85,6 +98,12 @@ export const en: LocaleDictionary = {
         phone: 'For urgent conversations',
       },
     },
+  },
+  footer: {
+    resume:
+      ' Full Stack & Android Developer specialized in building quality technical solutions.',
+    followMeLabel: 'Follow me on',
+    copyright: 'All rights reserved.',
   },
   proeficiencyLabels: {
     expert: 'Expert',
