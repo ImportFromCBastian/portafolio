@@ -2,12 +2,12 @@
 
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
-import { AnimatedText } from '@/components/animated-text'
+import { AnimatedText } from '@/components/shared/animated-text'
 import { Button } from '@/components/ui/button'
+import { useTranslation } from '@/hooks/use-translation'
 import { siteConfig } from '@/lib/constants'
-import { useTranslation } from '@/lib/useTranslation'
-import { en } from '@/locales/en'
-import { es } from '@/locales/es'
+import { en } from '@/lib/i18n/dictionaries/en'
+import { es } from '@/lib/i18n/dictionaries/es'
 
 export function Hero() {
   const { locale } = useTranslation({ es, en })

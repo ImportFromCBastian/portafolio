@@ -1,4 +1,4 @@
-import type { LocaleDictionary } from '@/lib/locale-types'
+import type { LocaleDictionary } from '@/lib/i18n/types'
 
 export const es: LocaleDictionary = {
   navigation: {

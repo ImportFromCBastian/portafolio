@@ -2,14 +2,14 @@
 
 import { Download, FileText } from 'lucide-react'
 import Link from 'next/link'
-import { AnimatedText } from '@/components/animated-text'
+import { AnimatedText } from '@/components/shared/animated-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { useTranslation } from '@/hooks/use-translation'
 import { siteConfig } from '@/lib/constants'
-import { useTranslation } from '@/lib/useTranslation'
-import { en } from '@/locales/en'
-import { es } from '@/locales/es'
+import { en } from '@/lib/i18n/dictionaries/en'
+import { es } from '@/lib/i18n/dictionaries/es'
 import { useLanguageStore } from '@/store/useLanguageStore'
 
 export function About() {

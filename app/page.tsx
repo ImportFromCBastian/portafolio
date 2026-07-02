@@ -1,8 +1,8 @@
-import { About } from '@/components/about'
-import { Contact } from '@/components/contact'
-import { Hero } from '@/components/hero'
-import { Projects } from '@/components/projects/projects'
-import { Skills } from '@/components/skills/skills'
+import { About } from '@/components/features/about'
+import { Contact } from '@/components/features/contact'
+import { Hero } from '@/components/features/hero'
+import { Projects } from '@/components/features/projects/projects'
+import { Skills } from '@/components/features/skills/skills'
 
 export default function Home() {
   return (

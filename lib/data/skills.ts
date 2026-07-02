@@ -1,18 +1,4 @@
-import type { LocalizedString } from '@/lib/utils'
-
-export interface SkillCategory {
-  id: number
-  name: LocalizedString | string
-  icon: string
-  description: LocalizedString
-  skills: Skill[]
-}
-
-export interface Skill {
-  name: string
-  proficiency: number
-  icon?: string
-}
+import type { SkillCategory } from '@/lib/types/skill'
 
 export const skillCategories: SkillCategory[] = [
   {

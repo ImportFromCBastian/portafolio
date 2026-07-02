@@ -1,4 +1,4 @@
-import { AnimatedText } from '@/components/animated-text'
+import { AnimatedText } from '@/components/shared/animated-text'
 import { TabsTrigger } from '@/components/ui/tabs'
 
 type Props = {

@@ -2,11 +2,11 @@
 
 import { Github, Heart, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
+import useLocaleLinks from '@/hooks/use-locale-links'
+import { useTranslation } from '@/hooks/use-translation'
 import { siteConfig } from '@/lib/constants'
-import useLocaleLinks from '@/lib/hooks/useLocaleLinks'
-import { useTranslation } from '@/lib/useTranslation'
-import { en } from '@/locales/en'
-import { es } from '@/locales/es'
+import { en } from '@/lib/i18n/dictionaries/en'
+import { es } from '@/lib/i18n/dictionaries/es'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()

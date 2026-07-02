@@ -37,8 +37,3 @@ export function getProficiencyColor(proficiency: number): string {
   if (proficiency >= 50) return 'from-amber-500 to-amber-600'
   return 'from-slate-500 to-slate-600'
 }
-
-export type LocalizedString = {
-  en: string
-  es: string
-}

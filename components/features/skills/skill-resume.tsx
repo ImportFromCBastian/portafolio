@@ -1,7 +1,7 @@
 'use client'
 
 import { Card } from '@/components/ui/card'
-import type { Skill } from '@/lib/data/skills'
+import type { Skill } from '@/lib/types/skill'
 
 type Props = {
   label: string
