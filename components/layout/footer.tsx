@@ -1,7 +1,8 @@
 'use client'
 
-import { Github, Heart, Linkedin, Mail } from 'lucide-react'
+import { Heart, Mail, UserRound } from 'lucide-react'
 import Link from 'next/link'
+import { GithubIcon } from '@/components/shared/icons'
 import useLocaleLinks from '@/hooks/use-locale-links'
 import { useTranslation } from '@/hooks/use-translation'
 import { siteConfig } from '@/lib/constants'
@@ -86,7 +87,7 @@ export function Footer() {
                 aria-label="GitHub"
                 className="inline-flex items-center justify-center h-9 w-9 rounded-lg border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 transition-colors"
               >
-                <Github className="h-4 w-4 text-neutral-400" />
+                <GithubIcon className="h-4 w-4 text-neutral-400" />
               </Link>
               <Link
                 href={siteConfig.links.linkedin}
@@ -95,7 +96,7 @@ export function Footer() {
                 aria-label="LinkedIn"
                 className="inline-flex items-center justify-center h-9 w-9 rounded-lg border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 transition-colors"
               >
-                <Linkedin className="h-4 w-4 text-neutral-400" />
+                <UserRound className="h-4 w-4 text-neutral-400" />
               </Link>
               <Link
                 href={`mailto:${siteConfig.links.email}`}

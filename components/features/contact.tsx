@@ -1,8 +1,9 @@
 'use client'
 
-import { Calendar, Github, Linkedin, Mail, Phone } from 'lucide-react'
+import { Calendar, Mail, Phone, UserRound } from 'lucide-react'
 import Link from 'next/link'
 import { AnimatedText } from '@/components/shared/animated-text'
+import { GithubIcon } from '@/components/shared/icons'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { useTranslation } from '@/hooks/use-translation'
@@ -22,7 +23,7 @@ export function Contact() {
       description: locale.sections.contact.channels.email,
     },
     {
-      icon: Linkedin,
+      icon: UserRound,
       label: locale.sections.contact.channels.linkedinLabel,
       value: 'sebastian-hernandez-fs',
       href: siteConfig.links.linkedin,
@@ -30,7 +31,7 @@ export function Contact() {
       external: true,
     },
     {
-      icon: Github,
+      icon: GithubIcon,
       label: locale.sections.contact.channels.githubLabel,
       value: '@ImportFromCBastian',
       href: siteConfig.links.github,

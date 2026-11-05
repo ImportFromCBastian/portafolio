@@ -1,5 +1,5 @@
-import { Github } from 'lucide-react'
 import Link from 'next/link'
+import { GithubIcon } from '@/components/shared/icons'
 import { Button } from '@/components/ui/button'
 
 type Props = {
@@ -21,7 +21,7 @@ export default function ProjectActions({ repository, label }: Props) {
           variant="outline"
           className="w-full border-neutral-700 hover:bg-neutral-800 text-neutral-300"
         >
-          <Github className="h-4 w-4 mr-2" />
+          <GithubIcon className="h-4 w-4 mr-2" />
           {label}
         </Button>
       </Link>

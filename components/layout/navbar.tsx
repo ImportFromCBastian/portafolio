@@ -1,7 +1,8 @@
 'use client'
 
-import { Github, Linkedin, Mail, Menu } from 'lucide-react'
+import { Mail, Menu, UserRound } from 'lucide-react'
 import Link from 'next/link'
+import { GithubIcon } from '@/components/shared/icons'
 import { LanguageToggle } from '@/components/shared/language-toggle'
 import { Button } from '@/components/ui/button'
 import {
@@ -74,7 +75,7 @@ export function Navbar() {
                   variant="ghost"
                   className="text-neutral-400 hover:text-neutral-50"
                 >
-                  <Github className="h-5 w-5" />
+                  <GithubIcon className="h-5 w-5" />
                 </Button>
               </Link>
               <Link
@@ -87,7 +88,7 @@ export function Navbar() {
                   variant="ghost"
                   className="text-neutral-400 hover:text-neutral-50"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <UserRound className="h-5 w-5" />
                 </Button>
               </Link>
               <Link href={`mailto:${siteConfig.links.email}`}>

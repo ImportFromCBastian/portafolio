@@ -1,8 +1,9 @@
 'use client'
 
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowRight, Mail, UserRound } from 'lucide-react'
 import Link from 'next/link'
 import { AnimatedText } from '@/components/shared/animated-text'
+import { GithubIcon } from '@/components/shared/icons'
 import { Button } from '@/components/ui/button'
 import { useTranslation } from '@/hooks/use-translation'
 import { siteConfig } from '@/lib/constants'
@@ -100,7 +101,7 @@ export function Hero() {
               className="inline-flex items-center justify-center h-10 w-10 rounded-lg border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 transition-colors"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5 text-neutral-400" />
+              <GithubIcon className="h-5 w-5 text-neutral-400" />
             </Link>
             <Link
               href={siteConfig.links.linkedin}
@@ -109,7 +110,7 @@ export function Hero() {
               className="inline-flex items-center justify-center h-10 w-10 rounded-lg border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5 text-neutral-400" />
+              <UserRound className="h-5 w-5 text-neutral-400" />
             </Link>
             <Link
               href={`mailto:${siteConfig.links.email}`}
